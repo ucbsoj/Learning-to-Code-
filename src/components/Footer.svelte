@@ -7,8 +7,8 @@
 
 <style>
 	footer {
-		background: var(--color-gray-800);
-		color: white;
+		background: var(--color-gray-500);
+		color: blue;
 		padding: 1rem;
 		text-align: center;
 	}

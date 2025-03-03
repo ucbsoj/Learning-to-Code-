@@ -13,7 +13,7 @@
 	<DemoHero />
 
 	<div class="text">
-		<p>Here are some examples of paragraphs.</p>
+		<p>Jess and I are working together.</p>
 
 		<p>
 			You should wrap your text in a container with a maximum height and the
@@ -28,6 +28,10 @@
 			>. Or italics, <i>like this</i>. Maybe you want to include a link to an
 			external source, you could do that
 			<a href="https://www.google.com/maps/">like this</a>.
+		</p>
+		<p>
+			Is there a way to have the link open in a new tab, not change the current
+			one.
 		</p>
 
 		<section>

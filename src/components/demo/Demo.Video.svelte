@@ -15,6 +15,8 @@
 	<Video
 		src="assets/demo/test.mp4"
 		caption="Pass in different properties to customize the video, like looping and autoplay."
+		autoplay="true"
+		loop="true"
 	/>
 </div>
 
