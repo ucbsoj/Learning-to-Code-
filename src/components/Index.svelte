@@ -3,5 +3,6 @@
 	import Footer from "$components/Footer.svelte";
 </script>
 
-<Demo />
-<Footer />
+<p>Hello</p>
+<Demo></Demo>
+<Footer></Footer>

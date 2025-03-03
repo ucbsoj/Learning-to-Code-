@@ -31,7 +31,7 @@
 		{#each explanation as text, i}
 			{@const active = value === i}
 			<div class="step" class:active>
-				<p>{text}</p>
+				<p>{text} {i}</p>
 			</div>
 		{/each}
 	</Scrolly>

@@ -12,9 +12,9 @@
 </script>
 
 <Hero
-	hed="This is a placeholder headline"
-	dek="Welcome to this demo"
-	byline="By This Person and That Person"
+	hed="Super Commuters. The Long Journey Home"
+	dek="Ever driven 90 minutes to work? These people do it every day."
+	byline="By Andres Larios and Jessica Blough"
 	src="assets/demo/test.jpg"
 	alt="A lake and some clouds"
 />
