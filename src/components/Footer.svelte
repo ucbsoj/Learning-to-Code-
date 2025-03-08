@@ -1,7 +1,7 @@
 <footer>
 	<p>
-		This is a project by a student at the UC Berkeley Graduate School of
-		Journalism
+		This interactive story was made in collaboration between two UC Berkeley
+		Graduate School of Journalism students and instructor Michelle.
 	</p>
 </footer>
 
