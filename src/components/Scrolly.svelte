@@ -24,7 +24,7 @@
 <section id="scrolly">
 	<div class="sticky">
 		<!--<h2>Current scroll step: <span>{value}</span></h2>
-
+<!how can I classify a sticky to change? > 
 		<h3>this is scrolling</h3> -->
 	</div>
 	<div class="spacer"></div>
