@@ -60,13 +60,14 @@
 	}
 
 	.spacer {
-		height: 75vh;
+		height: 50vh;
 	}
 
 	.step {
-		margin: 80vh 0;
+		margin: 60vh 10vw;
 		background: var(--color-gray-100);
 		text-align: center;
+		padding: 0 2rem;
 	}
 
 	.step p {

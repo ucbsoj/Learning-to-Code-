@@ -1,6 +1,7 @@
 {
 	"name": "svelte-starter",
 	"version": "6.9.1",
+	"homepage": "https://alariosjx.github.io/Learning-to-Code-/",
 	"scripts": {
 		"gdoc": "node tasks/fetch-google.js",
 		"style": "node tasks/style-dictionary.js",

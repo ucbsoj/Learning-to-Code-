@@ -7,10 +7,10 @@
 
 	let map = $state();
 	let mapContainer;
-	let lng = -122.46836;
-	let lat = 37.75784;
-	let zoom = 11.49;
-
+	let lng = -122.36125;
+	let lat = 37.8664;
+	let zoom = 13.93;
+	//[-122.36125, 37.86640]
 	// lng = -122.46836;
 	// lat = 37.75794;
 	// zoom = 11.49;
@@ -24,16 +24,25 @@
 				center: [initiateState.lng, initiateState.lat],
 				zoom: initiateState.zoom,
 				speed: 0.5,
-				essential: true
+				essential: false
 			});
 		}
 		if (value === 1) {
 			console.log("hi"),
 				map.flyTo({
-					center: [-120.46836, 30.75794],
-					zoom: 3,
+					center: [-122.45676, 37.76061],
+					zoom: 11.71,
 					speed: 0.5,
-					essential: true
+					essential: false
+				});
+		}
+		if (value === 2) {
+			console.log("hi"),
+				map.flyTo({
+					center: [-122.46836, 37.75794],
+					zoom: 11.49,
+					speed: 0.5,
+					essential: false
 				});
 		}
 	});

@@ -24,10 +24,7 @@
 			"content": [
 				{ "type": "p", "value": "This one is normal and just has paragraphs" },
 				{ "type": "p", "value": "This one too!" },
-				{
-					"type": "img",
-					"value": { "src": "assets/commute-images/sf-map.png" }
-				}
+				{ "type": "img", "value": { "src": "" } }
 			]
 		}
 	]
