@@ -5,6 +5,7 @@
 	import Scrolly from "$components/Scrolly.svelte";
 </script>
 
+<title> Bay Area Super Commuters </title>
 <Hero></Hero>
 <Scrolly></Scrolly>
 <Footer></Footer>

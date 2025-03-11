@@ -1,5 +1,8 @@
 <script>
+	import Mapbox from "$components/Mapbox.svelte";
+	import Audio from "$components/Audio.svelte";
 	import Scrolly from "$components/helpers/Scrolly.svelte";
+	import steps from "$data/steps.json";
 
 	/*
 		Scrolly is a component that allows you to create a scrollytelling effect.
@@ -11,29 +14,35 @@
 
 	let value = $state();
 
-	const explanation = [
-		"Scrollytelling is a great technique for telling stories with scrolling.",
-		"Everything in the container with class 'sticky' will stay put, while these steps scroll over it.",
-		"You could put images, videos, charts, or anything in that 'sticky' container.",
-		"You can have it update based on what step we're on, which is tracked in the variable called value.",
-		"Have fun!",
-		"Testing this out then"
-	];
+	let components = {
+		Audio
+	};
 </script>
 
 <section id="scrolly">
 	<div class="sticky">
-		<!--<h2>Current scroll step: <span>{value}</span></h2>
-<!how can I classify a sticky to change? > 
-		<h3>this is scrolling</h3> -->
+		<Mapbox />
 	</div>
 	<div class="spacer"></div>
 
 	<Scrolly bind:value>
-		{#each explanation as text, i}
-			{@const active = value === i}
-			<div class="step" class:active>
-				<p>{text}</p>
+		{#each steps.steps as step, i}
+			<div class="step">
+				{#each step.content as { type, value }}
+					{@const C = components[type]}
+					{@const isString = typeof value === "string"}
+					{#if C}
+						<C {...value} />
+					{:else if type === "text"}
+						<p>{@html value}</p>
+					{:else if isString}
+						<svelte:element this={type}>
+							{@html value}
+						</svelte:element>
+					{:else}
+						<svelte:element this={type} {...value}></svelte:element>
+					{/if}
+				{/each}
 			</div>
 		{/each}
 	</Scrolly>

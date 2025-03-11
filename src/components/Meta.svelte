@@ -1,6 +1,6 @@
 <script>
 	let {
-		title = "Title TK",
+		title = "Bay Area Super Commuters",
 		description = "Description TK",
 		url = "https://pudding.cool",
 		keywords = "",
