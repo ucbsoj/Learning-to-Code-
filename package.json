@@ -43,6 +43,7 @@
 	},
 	"browserslist": "> 0.5%, last 4 versions, not ie <= 11, not ie_mob <= 11",
 	"dependencies": {
+		"dotconfig": "^0.0.1-security",
 		"dotenv": "^16.4.7",
 		"mapbox-gl": "^3.10.0"
 	}
