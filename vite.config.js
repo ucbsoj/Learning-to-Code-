@@ -5,9 +5,11 @@ import { timeFormat } from "d3";
 import path from "path";
 import svg from "vite-plugin-svgstring";
 import dsv from "@rollup/plugin-dsv";
+import dotenv from "dotenv";
 
 const { version } = JSON.parse(readFileSync("package.json", "utf8"));
 const timestamp = timeFormat("%Y-%m-%d-%H:%M")(new Date());
+dotenv.config({ path: ".accesstoken.env" });
 
 export default defineConfig({
 	define: {

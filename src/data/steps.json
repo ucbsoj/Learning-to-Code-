@@ -2,8 +2,14 @@
 	"steps": [
 		{
 			"content": [
-				{ "type": "h2", "value": "This is a header" },
-				{ "type": "p", "value": "This is a paragraph" },
+				{
+					"type": "h2",
+					"value": "This is a header and i am testing its abilities"
+				},
+				{
+					"type": "p",
+					"value": "This is a paragraph and will have a lot of information regarding super commuters"
+				},
 				{
 					"type": "Audio",
 					"value": { "src": "assets/cord1.mp3", "color": "red" }

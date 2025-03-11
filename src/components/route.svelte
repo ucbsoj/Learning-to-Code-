@@ -31,8 +31,8 @@
   </body>
 </html> -->
 <script>
-	mapboxgl.accessToken =
-		"sk.eyJ1IjoiYWxhcmlvc2p6IiwiYSI6ImNtODFqOHVoaDBpYmMyanB6MmhueDduM3MifQ.0HWlbeB3uc4TOd6jriBpaA";
+	const accessToken = process.env.MAPBOX_ACCESS_TOKEN;
+	mapboxgl.accessToken = accessToken;
 	const map = new mapboxgl.Map({
 		container: "map",
 		style: "mapbox://styles/mapbox/streets-v12",
