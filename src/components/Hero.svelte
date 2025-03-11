@@ -15,8 +15,8 @@
 	hed="The Long Journey Home"
 	dek="If you thought commuting was bad, imagine super commuting."
 	byline="By Andres Larios and Jessica Blough"
-	src="assets/commute-images/sf-map.png"
-	alt="SF Map"
+	src="assets/commute-images/train.jpeg"
+	alt="Illustrated image of a train"
 />
 
 <!-- Hero with video -->

@@ -36,8 +36,12 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: white;
+		background-color: #223240;
 		background: rgba(0, 0, 0, 0.5);
-		padding: 0 1rem;
+		padding: 1rem 2rem;
 		text-align: center;
+	}
+	h2 {
+		font-size: 1rem; /* Adjust this value to change the size of the dek */
 	}
 </style>
