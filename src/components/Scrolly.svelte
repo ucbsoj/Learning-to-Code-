@@ -13,6 +13,7 @@
 	*/
 
 	let value = $state();
+	// $inspect(value);
 
 	let components = {
 		Audio
@@ -21,7 +22,7 @@
 
 <section id="scrolly">
 	<div class="sticky">
-		<Mapbox />
+		<Mapbox {value} />
 	</div>
 	<div class="spacer"></div>
 
@@ -53,7 +54,9 @@
 <style>
 	.sticky {
 		position: sticky;
-		top: 4em;
+		top: 0;
+		height: 100vh;
+		z-index: -1;
 	}
 
 	.spacer {

@@ -1,6 +1,8 @@
 import adapterStatic from "@sveltejs/adapter-static";
 import { sveltePreprocess } from "svelte-preprocess";
 import autoprefixer from "autoprefixer";
+import { config } from "dotenv";
+config();
 
 const preprocess = sveltePreprocess({
 	postcss: {
