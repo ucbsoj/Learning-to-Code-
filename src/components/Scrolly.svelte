@@ -64,10 +64,14 @@
 	}
 
 	.step {
-		margin: 60vh 10vw;
+		margin: 100vh 20vw;
 		background: var(--color-gray-100);
 		text-align: center;
-		padding: 0 2rem;
+		padding: 1rem 2rem;
+		/* background-image: url("/assets/commute-images/gps.svg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat; */
 	}
 
 	.step p {

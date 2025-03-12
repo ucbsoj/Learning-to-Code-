@@ -20,6 +20,7 @@
 	$effect(() => {
 		if (!map) return;
 		if (value === 0) {
+			//inside the bay
 			map.flyTo({
 				center: [initiateState.lng, initiateState.lat],
 				zoom: initiateState.zoom,
@@ -28,6 +29,7 @@
 			});
 		}
 		if (value === 1) {
+			//SF Map
 			console.log("hi"),
 				map.flyTo({
 					center: [-122.45676, 37.76061],
