@@ -25,7 +25,7 @@
 				center: [initiateState.lng, initiateState.lat],
 				zoom: initiateState.zoom,
 				speed: 0.5,
-				essential: false
+				essential: false //defines whether or not the map is essential for the story. mainly toggled for people who may choose to turn off motion sickness blurs
 			});
 		}
 		if (value === 1) {
@@ -38,7 +38,7 @@
 					essential: false
 				});
 		}
-		if (value === 2) {
+		if (value >= 2 && value <= 6) {
 			console.log("hi"),
 				map.flyTo({
 					center: [-122.46836, 37.75794],
@@ -46,7 +46,7 @@
 					speed: 0.5,
 					essential: false
 				});
-		}
+		} ///values to then be the steps here.
 	});
 
 	onMount(() => {
