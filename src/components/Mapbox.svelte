@@ -38,15 +38,176 @@
 					essential: false
 				});
 		}
-		if (value >= 2 && value <= 6) {
+		if (value >= 2 && value <= 3) {
+			//30 min
 			console.log("hi"),
 				map.flyTo({
-					center: [-122.46836, 37.75794],
-					zoom: 11.49,
+					center: [-122.42924, 37.7387],
+					zoom: 10.32,
 					speed: 0.5,
 					essential: false
 				});
-		} ///values to then be the steps here.
+		}
+		if (value >= 4 && value <= 5) {
+			//1 hour
+			console.log("hi"),
+				map.flyTo({
+					center: [-122.29326, 37.59667],
+					zoom: 9.4,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value >= 6 && value <= 7) {
+			//begin the story
+			console.log("hi"),
+				map.flyTo({
+					center: [-122.41608, 37.73089],
+					zoom: 8.8,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value >= 8 && value <= 9) {
+			//capitola
+			console.log("hi"),
+				map.flyTo({
+					center: [-121.96773, 36.97106],
+					zoom: 13.26,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value === 10) {
+			//grow capitola
+			console.log("hi"),
+				map.flyTo({
+					center: [-122.07336, 37.18571],
+					zoom: 9.58,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value === 11) {
+			// cord entire
+			console.log("hi"),
+				map.flyTo({
+					center: [-122.29592, 37.38058],
+					zoom: 8.66,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value === 12) {
+			//tracy
+			console.log("hi"),
+				map.flyTo({
+					center: [-121.48742, 37.75276],
+					zoom: 12.14,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value === 13) {
+			//tracy mid
+			console.log("hi"),
+				map.flyTo({
+					center: [-121.83676, 37.71429],
+					zoom: 10.05,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value === 14) {
+			// tracy end
+			console.log("hi"),
+				map.flyTo({
+					center: [-122.01186, 37.69752],
+					zoom: 9.63,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value === 15) {
+			// los banos
+			console.log("hi"),
+				map.flyTo({
+					center: [-120.8652, 37.06286],
+					zoom: 12.72,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value === 16) {
+			// los banos mid
+			console.log("hi"),
+				map.flyTo({
+					center: [-121.11914, 37.30514],
+					zoom: 9.31,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value >= 17 && value <= 19) {
+			// los banos end
+			console.log("hi"),
+				map.flyTo({
+					center: [-121.90454, 37.5183],
+					zoom: 8.23,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value === 20) {
+			// orange
+			console.log("hi"),
+				map.flyTo({
+					center: [-117.86084, 33.72782],
+					zoom: 10.64,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value === 21) {
+			// orange mid
+			console.log("hi"),
+				map.flyTo({
+					center: [-121.41237, 35.65217],
+					zoom: 6.39,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value === 22) {
+			// los medanos
+			console.log("hi"),
+				map.flyTo({
+					center: [-122.2025, 37.86686],
+					zoom: 9.93,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value >= 23 && value <= 24) {
+			// fishelson
+			console.log("hi"),
+				map.flyTo({
+					center: [-122.26896, 37.64641],
+					zoom: 8.68,
+					speed: 0.5,
+					essential: false
+				});
+		}
+
+		// if (value >= 2 && value <= 6) {
+		// 	console.log("hi"),
+		// 		map.flyTo({
+		// 			center: [-122.45676, 37.76061],
+		// 			zoom: 11.71,
+		// 			speed: 0.5,
+		// 			essential: false
+		// 		});
+		///values to then be the steps here.
 	});
 
 	onMount(() => {
