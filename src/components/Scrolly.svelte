@@ -33,6 +33,7 @@
 				class:last={i === steps.steps.length - 1}
 				class:left={i === 2 || i === 4}
 				class:right={false}
+				class:red={i === 10}
 			>
 				{#each step.content as { type, value }}
 					{@const C = components[type]}
@@ -90,5 +91,9 @@
 
 	.last {
 		margin-bottom: 0;
+	}
+
+	.red {
+		border: 3px solid red;
 	}
 </style>
