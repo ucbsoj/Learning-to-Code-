@@ -32,7 +32,11 @@
 			"cap-sf",
 			"tracy-redwood",
 			"losb-sf",
-			"losmedanos"
+			"losmedanos",
+			"sf-mil",
+			"sf-bh",
+			"sf-sj",
+			"bh-sj"
 		];
 		customLayers.forEach((layer) => toggleLayerVisibility(layer, "none"));
 		// const layers = [
@@ -72,7 +76,8 @@
 		}
 		if (value >= 2 && value <= 3) {
 			//30 min
-			toggleLayerVisibility("30-min", "visible");
+			toggleLayerVisibility("sf-bh", "visible");
+			toggleLayerVisibility("sf-mil", "visible");
 			console.log("hi"),
 				map.flyTo({
 					center: [-122.42924, 37.7387],
@@ -83,7 +88,8 @@
 		}
 		if (value >= 4 && value <= 5) {
 			//1 hour
-			toggleLayerVisibility("hour-trip", "visible");
+			toggleLayerVisibility("sf-sj", "visible");
+			toggleLayerVisibility("bh-sj", "visible");
 
 			console.log("hi"),
 				map.flyTo({
@@ -290,7 +296,11 @@
 				"cap-sf",
 				"tracy-redwood",
 				"losb-sf",
-				"losmedanos"
+				"losmedanos",
+				"sf-mil",
+				"sf-bh",
+				"sf-sj",
+				"bh-sj"
 			];
 			customLayers.forEach((layer) => toggleLayerVisibility(layer, "none"));
 		});

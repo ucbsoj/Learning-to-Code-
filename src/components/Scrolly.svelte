@@ -28,7 +28,12 @@
 
 	<Scrolly bind:value>
 		{#each steps.steps as step, i}
-			<div class="step">
+			<div
+				class="step"
+				class:last={i === steps.steps.length - 1}
+				class:left={i === 2 || i === 4}
+				class:right={false}
+			>
 				{#each step.content as { type, value }}
 					{@const C = components[type]}
 					{@const isString = typeof value === "string"}
@@ -81,5 +86,9 @@
 	span {
 		background: var(--color-mark);
 		padding: 0 8px;
+	}
+
+	.last {
+		margin-bottom: 0;
 	}
 </style>
