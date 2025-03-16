@@ -17,10 +17,42 @@
 	$inspect(value);
 	$inspect(map);
 	let initiateState = { lng, lat, zoom };
+
+	function toggleLayerVisibility(layerId, visibility) {
+		if (map.getLayer(layerId)) {
+			map.setLayoutProperty(layerId, "visibility", visibility);
+		}
+	}
+
 	$effect(() => {
 		if (!map) return;
+		const customLayers = [
+			"30-min",
+			"hour-trip",
+			"cap-sf",
+			"tracy-redwood",
+			"losb-sf",
+			"losmedanos"
+		];
+		customLayers.forEach((layer) => toggleLayerVisibility(layer, "none"));
+		// const layers = [
+		//
+		//  "30-min-4fofze",
+		// "hour-trip-ay9l9x",
+		//  "cap-sf-3v3hlw",
+		//  "tracy-redwood-866qbh",
+		//  "losB-sf-69rosq",
+		//  "losmedanos-8r6fnf"
+		// ];
 		if (value === 0) {
+			console.log(map.getStyle().layers);
 			//inside the bay
+			// map.setLayoutProperty("losmedanos", "visibility", "none"),
+			// 	map.setLayoutProperty("hour-trip-ay9l9x", "visibility", "none"),
+			// 	map.setLayoutProperty("cap-sf-3v3hlw", "visibility", "none"),
+			// 	map.setLayoutProperty("tracy-redwood-866qbh", "visibility", "none"),
+			// 	map.setLayoutProperty("losB-sf-69rosq", "visibility", "none"),
+			// 	map.setLayoutProperty("losmedanos-8r6fnf", "visibility", "none"),
 			map.flyTo({
 				center: [initiateState.lng, initiateState.lat],
 				zoom: initiateState.zoom,
@@ -40,6 +72,7 @@
 		}
 		if (value >= 2 && value <= 3) {
 			//30 min
+			toggleLayerVisibility("30-min", "visible");
 			console.log("hi"),
 				map.flyTo({
 					center: [-122.42924, 37.7387],
@@ -50,6 +83,8 @@
 		}
 		if (value >= 4 && value <= 5) {
 			//1 hour
+			toggleLayerVisibility("hour-trip", "visible");
+
 			console.log("hi"),
 				map.flyTo({
 					center: [-122.29326, 37.59667],
@@ -64,12 +99,13 @@
 				map.flyTo({
 					center: [-122.41608, 37.73089],
 					zoom: 8.8,
-					speed: 0.5,
+					speed: 0.4,
 					essential: false
 				});
 		}
 		if (value >= 8 && value <= 9) {
 			//capitola
+			toggleLayerVisibility("cap-sf", "visible");
 			console.log("hi"),
 				map.flyTo({
 					center: [-121.96773, 36.97106],
@@ -79,6 +115,7 @@
 				});
 		}
 		if (value === 10) {
+			toggleLayerVisibility("cap-sf", "visible");
 			//grow capitola
 			console.log("hi"),
 				map.flyTo({
@@ -89,6 +126,7 @@
 				});
 		}
 		if (value === 11) {
+			toggleLayerVisibility("cap-sf", "visible");
 			// cord entire
 			console.log("hi"),
 				map.flyTo({
@@ -99,16 +137,18 @@
 				});
 		}
 		if (value === 12) {
+			toggleLayerVisibility("tracy-redwood", "visible");
 			//tracy
 			console.log("hi"),
 				map.flyTo({
 					center: [-121.48742, 37.75276],
 					zoom: 12.14,
-					speed: 0.5,
+					speed: 1,
 					essential: false
 				});
 		}
 		if (value === 13) {
+			toggleLayerVisibility("tracy-redwood", "visible");
 			//tracy mid
 			console.log("hi"),
 				map.flyTo({
@@ -120,6 +160,7 @@
 		}
 		if (value === 14) {
 			// tracy end
+			toggleLayerVisibility("tracy-redwood", "visible");
 			console.log("hi"),
 				map.flyTo({
 					center: [-122.01186, 37.69752],
@@ -129,16 +170,18 @@
 				});
 		}
 		if (value === 15) {
+			toggleLayerVisibility("losb-sf", "visible");
 			// los banos
 			console.log("hi"),
 				map.flyTo({
 					center: [-120.8652, 37.06286],
 					zoom: 12.72,
-					speed: 0.5,
+					speed: 1,
 					essential: false
 				});
 		}
 		if (value === 16) {
+			toggleLayerVisibility("losb-sf", "visible");
 			// los banos mid
 			console.log("hi"),
 				map.flyTo({
@@ -148,8 +191,22 @@
 					essential: false
 				});
 		}
-		if (value >= 17 && value <= 19) {
+		if (value === 17) {
+			toggleLayerVisibility("losb-sf", "visible");
 			// los banos end
+			console.log("hi"),
+				map.flyTo({
+					center: [-121.90454, 37.5183],
+					zoom: 8.23,
+					speed: 0.5,
+					essential: false
+				});
+		}
+		if (value >= 18 && value <= 19) {
+			toggleLayerVisibility("losb-sf", "visible");
+			toggleLayerVisibility("cap-sf", "visible");
+			toggleLayerVisibility("tracy-redwood", "visible");
+			//fishelson
 			console.log("hi"),
 				map.flyTo({
 					center: [-121.90454, 37.5183],
@@ -170,6 +227,7 @@
 		}
 		if (value === 21) {
 			// orange mid
+			toggleLayerVisibility("losmedanos", "visible");
 			console.log("hi"),
 				map.flyTo({
 					center: [-121.41237, 35.65217],
@@ -180,6 +238,7 @@
 		}
 		if (value === 22) {
 			// los medanos
+			toggleLayerVisibility("losmedanos", "visible");
 			console.log("hi"),
 				map.flyTo({
 					center: [-122.2025, 37.86686],
@@ -190,6 +249,10 @@
 		}
 		if (value >= 23 && value <= 24) {
 			// fishelson
+			toggleLayerVisibility("losmedanos", "visible");
+			toggleLayerVisibility("losb-sf", "visible");
+			toggleLayerVisibility("tracy-redwood", "visible");
+			toggleLayerVisibility("cap-sf", "visible");
 			console.log("hi"),
 				map.flyTo({
 					center: [-122.26896, 37.64641],
@@ -200,13 +263,13 @@
 		}
 
 		// if (value >= 2 && value <= 6) {
-		// 	console.log("hi"),
-		// 		map.flyTo({
-		// 			center: [-122.45676, 37.76061],
-		// 			zoom: 11.71,
-		// 			speed: 0.5,
-		// 			essential: false
-		// 		});
+		//  console.log("hi"),
+		//      map.flyTo({
+		//          center: [-122.45676, 37.76061],
+		//          zoom: 11.71,
+		//          speed: 0.5,
+		//          essential: false
+		//      });
 		///values to then be the steps here.
 	});
 
@@ -218,6 +281,18 @@
 			center: [initiateState.lng, initiateState.lat],
 			zoom: initiateState.zoom,
 			interactive: false
+		});
+
+		map.on("load", () => {
+			const customLayers = [
+				"30-min",
+				"hour-trip",
+				"cap-sf",
+				"tracy-redwood",
+				"losb-sf",
+				"losmedanos"
+			];
+			customLayers.forEach((layer) => toggleLayerVisibility(layer, "none"));
 		});
 	});
 
