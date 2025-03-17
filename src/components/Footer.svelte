@@ -1,7 +1,7 @@
 <footer>
 	<p>
 		This interactive story was made in collaboration between the UC Berkeley
-		Graduate School of Journalism students and instructor Michelle.
+		Graduate School of Journalism students and instructor Michelle Pera-McGhee.
 	</p>
 </footer>
 

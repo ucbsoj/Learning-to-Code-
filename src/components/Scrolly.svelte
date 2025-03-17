@@ -30,10 +30,46 @@
 		{#each steps.steps as step, i}
 			<div
 				class="step"
+				class:first={i === 0}
 				class:last={i === steps.steps.length - 1}
-				class:left={i === 2 || i === 4}
-				class:right={false}
-				class:red={i === 10}
+				class:left={i === 2 ||
+					i === 4 ||
+					i === 10 ||
+					i === 11 ||
+					i === 14 ||
+					i === 17 ||
+					i === 21}
+				class:right={i === 5 ||
+					i === 8 ||
+					i === 13 ||
+					i === 15 ||
+					i === 16 ||
+					i === 18 ||
+					i === 19 ||
+					i === 22}
+				class:capitola={i === 8 || i === 9 || i === 10 || i === 11}
+				class:center={i === 0 ||
+					i === 1 ||
+					i === 11 ||
+					i === 9 ||
+					i === 8 ||
+					i === 11}
+				class:tracy={i === 12 || i === 13 || i === 14}
+				class:los={i === 15 || i === 16 || i === 17}
+				class:medanos={i === 20 || i === 21 || i === 22}
+				class:fish={i === 0 ||
+					i === 1 ||
+					i === 2 ||
+					i === 3 ||
+					i === 4 ||
+					i === 5 ||
+					i === 18 ||
+					i === 19 ||
+					i === 23 ||
+					i === 24}
+				data-step={i}
+				class:hidden={i === 3 || i === 7}
+				class:audio={i === 9 || i === 11 || i === 13 || i === 14 || i === 22}
 			>
 				{#each step.content as { type, value }}
 					{@const C = components[type]}
@@ -66,7 +102,7 @@
 	}
 
 	.spacer {
-		height: 50vh;
+		height: 10vh;
 	}
 
 	.step {
@@ -88,12 +124,50 @@
 		background: var(--color-mark);
 		padding: 0 8px;
 	}
+	.first {
+		margin-top: 0;
+	}
 
 	.last {
-		margin-bottom: 0;
+		margin-bottom: 200px;
 	}
 
-	.red {
+	.capitola {
+		border: 3px solid #f86624;
+	}
+
+	.tracy {
+		border: 3px solid #f9c80e;
+	}
+	.los {
+		border: 3px solid #02c3bd;
+	}
+	.medanos {
 		border: 3px solid red;
 	}
+	.fish {
+		border: 3px solid #52647e;
+	}
+
+	.left {
+		margin-left: 50px;
+		max-width: 500px;
+	}
+
+	.right {
+		margin-right: 50px;
+		margin-left: 55.5vw;
+	}
+	.hidden {
+		display: none;
+	}
+	.audio {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	/* .center {false
+	} */
+	/* .red {
+		border: 3px solid red;
+	} */
 </style>

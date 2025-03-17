@@ -13,10 +13,10 @@
 
 <Hero
 	hed="The Long Journey Home"
-	dek="If you thought commuting was bad, imagine super commuting."
+	dek="The pandemic changed the way we move. For some, that means commuting farther from home than ever before."
 	byline="By Andres Larios and Jessica Blough"
 	src="assets/commute-images/train.jpeg"
-	alt="Illustrated image of a train"
+	alt="Illustrated image of a train."
 />
 
 <!-- Hero with video -->
