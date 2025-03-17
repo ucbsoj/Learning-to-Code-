@@ -1,7 +1,11 @@
 <footer>
 	<p>
-		This interactive story was made in collaboration between the UC Berkeley
-		Graduate School of Journalism students and instructor Michelle Pera-McGhee.
+		Reporting by Jessica Blough and Andres Larios. Design and development by
+		Andres Larios.
+	</p>
+	<p>
+		Special thanks to Michelle Pera-McGhee for her contributions to the design
+		and instruction of this website
 	</p>
 </footer>
 
